@@ -1,32 +1,30 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { APIURLS } from './utils/APIURLS';
 import { Router } from '@angular/router';
-import { AppointmentsComponent } from './appointment/appointment.component';
+
+import { APIURLS } from './utils/APIURLS';
+import { AppointmentListingComponent } from './appointment-listing/appointment-listing.component';
 
 const routes: Routes = [
 
-  // {path: 'appointments/:date'}
+  { path: 'past-week', component: AppointmentListingComponent },
+  { path: 'today', component: AppointmentListingComponent },
+  { path: 'next-week', component: AppointmentListingComponent },
+  { path: 'this-week-old', component: AppointmentListingComponent },
+  { path: 'this-week-upcomming', component: AppointmentListingComponent },
+
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot([
-    {path: 'appointments', component: AppointmentsComponent},
-  ])],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { 
+export class AppRoutingModule {
   dynamicRoute : string;
 
   constructor(private apis:APIURLS, private router: Router)
   {
     this.dynamicRoute = this.apis.urlKeyword;
 
-    this.router.resetConfig([
-
-      {path: this.dynamicRoute+'/appointments', component: AppointmentsComponent},
-      // {path: '**', redirectTo: this.dynamicRoute, pathMatch: 'full'},
-      // {path: '', redirectTo: this.dynamicRoute, pathMatch: 'full'},
-    ]);
   }
 }

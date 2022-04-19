@@ -1,0 +1,20 @@
+<div class="apt_appointment_listing_section">
+  <div class="apt_listing_container" *ngFor="let checkUp of CheckUpTypes">
+    <div class="apt_listing_appointment_card">
+
+    <!-- <div  > -->
+      <h2>
+        <a href="javascript:void(0)" [routerLink]="'/'">{{ checkUp }} </a>
+      </h2>
+
+      <div class="apt_time_remain"> 12:09:21 </div>
+      <div class="apt_patient_details">
+        <span>Patient 1</span>
+        <span> 39 </span>
+        <span> Male </span>
+      </div>
+      <div class="apt_appoint_time"> 04:40:00 AM </div>
+    </div>
+
+  </div>
+</div>

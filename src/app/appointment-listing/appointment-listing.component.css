@@ -1,0 +1,44 @@
+.apt_appointment_listing_section .apt_listing_container {
+  margin-bottom: 5px;
+  height:max-content;
+  width: 90%;
+  margin: 0 auto;
+  height:100px;
+}
+
+/* .apt_appointment_listing_section .apt_listing_container .apt_listing_checkUp_type {
+  background-color: rgb(67, 109, 88);
+  text-align: center;
+  width: 100%;
+  float: left;
+}
+
+*/
+.apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_card {
+  width:100%;
+  margin: 0 auto;
+  background-color: rgb(94, 161, 6);
+  color:white;
+  float: left;
+  display: flex;
+}
+.apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_card h2 {
+  width:100%;
+}
+.apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_card h2 a {
+  color:rgb(255, 253, 224);
+  font-weight: 300;
+}
+
+.apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_card .apt_time_remain {
+  float:left;
+  width:10%;
+}
+.apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_card .apt_patient_details {
+  float: left;
+  width:80%;
+}
+.apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_card .apt_appoint_time {
+  float: left;
+  width:10%;
+}

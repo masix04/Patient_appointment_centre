@@ -1,0 +1,21 @@
+.apt_listing_tabs_section {
+  margin: 10px 0;
+}
+
+.apt_listing_tabs ul {
+  display: flex;
+  flex-wrap: wrap;
+  width:100%;
+  padding: 0;
+  text-align: center;
+}
+.apt_listing_tabs ul li {
+  width:16%;
+  padding: 20px;
+  margin: 0 5px;
+  display: inline-block;
+  background-color: rgb(205, 240, 82);
+}
+.apt_listing_tabs ul li a {
+  color: black;
+}
