@@ -1,20 +1,25 @@
 <div class="apt_appointment_listing_section">
-  <div class="apt_listing_container" *ngFor="let checkUp of CheckUpTypes">
-    <div class="apt_listing_appointment_card">
+  <div class="apt_listing_container">
+    <div class="apt_listing_appointment_row" *ngFor="let checkUp of CheckUpTypes">
 
-    <!-- <div  > -->
       <h2>
         <a href="javascript:void(0)" [routerLink]="'/'">{{ checkUp }} </a>
       </h2>
 
-      <div class="apt_time_remain"> 12:09:21 </div>
-      <div class="apt_patient_details">
-        <span>Patient 1</span>
-        <span> 39 </span>
-        <span> Male </span>
+      <div class="apt_card">
+        <div class="apt_time_remain">12:09:21</div>
+        <div class="apt_patient_details">
+          <span class="apt_patient_name">Patient Name</span>
+          <i class="apt_patient_details_separator"></i> <!-- Separator-->
+          <span class="apt_patient_age">39</span>
+          <span class="apt_patient_gender" [ngStyle]="(gender == 'Male')? {'background-color':'rgb(109, 218, 233)'} : ( (gender == 'Female')? {'background-color': 'rgb(241, 153, 219)'} : {'background-color': ' rgb(212, 208, 211)'}) ">{{gender}}</span>
+          <span class="apt_appointed_doctor_name">
+            <a href="javascript:void(0)" [routerLink]="['/']">Dr. Dolittle</a>
+          </span>
+        </div>
+        <div class="apt_appoint_time">04:40:00 AM</div>
       </div>
-      <div class="apt_appoint_time"> 04:40:00 AM </div>
-    </div>
 
+    </div>
   </div>
 </div>
