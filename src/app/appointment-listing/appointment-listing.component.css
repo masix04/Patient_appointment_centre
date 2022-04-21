@@ -6,18 +6,11 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* .apt_appointment_listing_section .apt_listing_container .apt_listing_checkUp_type {
-  background-color: rgb(67, 109, 88);
-  text-align: center;
-  width: 100%;
-  float: left;
-}
-
-*/
 .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row {
   width:100%;
   color:white;
   margin-bottom: 10px;
+  /* justify-content: space-between; */
 }
 .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row h2 {
   width:95%;
@@ -32,15 +25,16 @@
 }
 .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_card {
   background-color: rgb(152, 236, 135);
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
   padding-left: 20px;
   padding-right: 20px;
   height:50px;
+  /* justify-content: space-between; */
 }
 
-.apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_time_remain {
-  width:11%;
+.apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_card .apt_time_remain {
+  /* width:11%; */
   float: left;
   line-height: 50px;
   text-align: center;
@@ -48,9 +42,10 @@
   font-weight: 600;
   font-size: 18px;
   color: green;
+  padding-right:10px;
   /* position: absolute; */
 }
-.apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_patient_details {
+.apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_card .apt_patient_details {
   width:77%;
   float:left;
   line-height: 50px;
@@ -61,25 +56,28 @@
   background-color: rgb(190, 187, 6);
   /* position:relative; */
 }
-.apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_appoint_time {
-  width:11%;
-  float: left;
+.apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_card .apt_appoint_time {
+  /* width:11%; */
+  float: right;
   line-height: 50px;
   text-align: center;
   color: black;
   font-weight: 600;
   font-size: 18px;
+  height:50px;
+  overflow: hidden;
   /* position: absolute; */
-
 }
-
-/* .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_patient_details span {
-
-} */
 
 .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_patient_details .apt_patient_name {
   border: yellow 1px solid;
   padding: 5px 10px;
+  height:50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_patient_details .apt_patient_age {
+  color: rgb(240, 255, 24);
 }
 .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_patient_details .apt_patient_details_separator {
   border-right:1px solid rgb(121, 156, 40);
@@ -88,15 +86,153 @@
 .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_patient_details .apt_appointed_doctor_name {
   float:right;
   text-align: center;
-  background-color: black;
+  background-color: rgb(85, 70, 70);
   width:30%;
+  height:50px;
+  overflow: hidden;
+  padding:0 4px;
 }
 .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_patient_details .apt_appointed_doctor_name a{
   color:white;
+
 }
 .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_patient_details .apt_patient_gender {
   background-color: rgb(212, 208, 211);
   color:white;
   padding:0 10px;
   float:right;
+}
+
+@media (max-width:1170px) {
+  .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_appoint_time {
+    /* font-size: 16px; */
+    width:13%;
+  }
+}
+@media (max-width:991px) {
+  .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_card .apt_patient_details {
+    width:73%;
+  }
+}
+@media (max-width:720px) {
+  .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row h2 {
+    line-height: 50px;
+    width:92%;
+  }
+  .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row h2 a {
+    font-size: 20px;
+  }
+  .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_card {
+    height:150px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding:0 2px;
+  }
+  .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_card .apt_time_remain {
+    width:100%;
+    padding-right: 0;
+    height:40px;
+    line-height: 35px;
+  }
+  .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_card .apt_patient_details {
+    width:100%;
+    padding-left: 2px;
+    height:70px;
+    line-height: 70px;
+  }
+  .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_patient_details .apt_patient_details_separator {
+    margin: 0 10px;
+  }
+  .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_patient_details .apt_patient_name {
+    padding: 10px 10px;
+    height:70px;
+    overflow: hidden;
+  }
+  /* .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_patient_details .apt_patient_gender {
+    padding: 10px 10px;
+  } */
+  .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_patient_details .apt_appointed_doctor_name {
+    height:70px;
+  }
+  .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_card .apt_appoint_time {
+    width:100%;
+    height:40px;
+    line-height:35px;
+  }
+}
+@media (max-width:576px) {
+  /* .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row h2 {
+    line-height: 50px;
+    width:92%;
+  }
+  .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row h2 a {
+    font-size: 20px;
+  } */
+  .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_card {
+    height:150px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding:2px 2px;
+    /* display: grid; */
+  }
+  .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_card .apt_time_remain {
+    /* width:50%;
+    padding-right: 0;
+    height:30px;
+    line-height: 30px;
+    text-align: left; */
+    display: none;
+  }
+  .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_card .apt_patient_details {
+    width:70%;
+    padding: 0 2px 2px 2px;
+    margin-left:2px;
+    border-top-left-radius: 8px;
+    height:max-content;
+    line-height: 30px;
+    display: grid;
+    background-color: rgb(88, 179, 88);
+    color: white;
+    text-decoration: underline;
+  }
+  .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_patient_details .apt_patient_details_separator {
+    /* margin: 0 10px; */
+    display: none;
+  }
+  .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_patient_details .apt_patient_name {
+    padding: 3px 3px;
+    border: none;
+    height:30px;
+    overflow: hidden;
+    /* line-height: 28px; */
+    /* width:900px; */
+  }
+  .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_patient_details .apt_patient_gender {
+    padding: 3px 3px;
+    width: fit-content;
+  }
+  .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_patient_details .apt_appointed_doctor_name {
+    float:right;
+    /* width:30%; */
+    padding:3px 15px;
+    width:fit-content;
+    height:30px;
+  }
+  .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_patient_details .apt_patient_age {
+    /* width:200px; */
+    color: white;
+    padding: 3px 3px;
+    margin-left:0;
+    /* width: */
+    /* border-top-left-radius: 8px; */
+    background-color: rgb(92, 202, 92);
+  }
+  .apt_appointment_listing_section .apt_listing_container .apt_listing_appointment_row .apt_card .apt_appoint_time {
+    width:25%;
+    height:30px;
+    line-height:30px;
+    text-align: center;
+    float: right;
+
+  }
 }
