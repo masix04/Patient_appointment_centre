@@ -9,9 +9,10 @@
   width:100%;
   padding: 0;
   text-align: center;
+  justify-content: center;
 }
 .apt_listing_tabs ul li {
-  width:16%;
+  width:15%;
   padding: 20px;
   margin: 0 10.3px;
   display: inline-block;
@@ -21,4 +22,26 @@
   color: black;
   font-size: 18px;
   font-weight: 600;
+}
+@media (max-width:1280px) {
+  .apt_listing_tabs ul li {
+    padding: 10px;
+    margin: 0 7.3px;
+  }
+}
+@media (max-width:720px) {
+  .apt_listing_tabs ul li {
+    width:45%;
+    margin: 0 5px 5px 5px;
+  }
+}
+@media (max-width:615px) {
+  .apt_listing_tabs ul li {
+    width:40%;
+  }
+}
+@media (max-width:380px) {
+  .apt_listing_tabs ul li {
+    width:90%;
+  }
 }

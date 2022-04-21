@@ -11,14 +11,15 @@
 .psc_filter_header
 {
     background-color:green;
-    height:70px;
+    height:max-content;
     color:honeydew;
     font-size:25px;
     padding:10px 0;
 }
-/* .filter_select
+.psc_filter_select
 {
-    display: -webkit-box;
+  justify-content: center;
+    /* display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0 -2px;
@@ -26,14 +27,15 @@
       -ms-flex-positive: 1;
           flex-grow: 1;
   -ms-flex-preferred-size: 1;
-      flex-basis: 1;
-} */
+      flex-basis: 1; */
+}
 .psc_filter_select select{
     width: 30%;
     margin: 5px 4px 2px;
     font-size: 15px;
     padding:7px 0 7px 5px;
     appearance: none;
+
 }
 .psc_filter_select button{
     width: 35%;
@@ -61,4 +63,26 @@
 .show-center
 {
     text-align: center;
+}
+
+@media (max-width:615px) {
+  .psc_filter_select button {
+    width:30%;
+    text-align: center;
+  }
+}
+
+@media (max-width:380px) {
+  .psc_filter_select button {
+    width:96%;
+    margin:0 0 0 5px;
+  }
+  .psc_filter_select select {
+    width:47%;
+  }
+  .show-center {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
 }

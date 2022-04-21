@@ -30,3 +30,17 @@
 {
     text-align: center;
 }
+
+@media (max-width:615px) {
+  .appointment_heading {
+     font-size: 20px;
+     height: 30px;
+  }
+}
+@media (max-width:420px) {
+  .appointment_heading {
+    font-size: 18px;
+    height:25px;
+    font-weight: 600;
+  }
+}
